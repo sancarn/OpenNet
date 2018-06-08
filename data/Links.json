@@ -1,0 +1,4 @@
+[
+  {"id":"a.1","type":"hw_conduit","us_node":"a","ds_node":"b"},
+  {"id":"b.1","type":"hw_conduit","us_node":"b","ds_node":"c"}
+]
