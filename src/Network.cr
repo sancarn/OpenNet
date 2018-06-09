@@ -4,6 +4,7 @@ require "./libs/Subcatchment"
 require "json"
 
 module OW
+    OW::use_strict = false
     DEFAULT_OPTIONS = {
         :path_nodes => "../data/Nodes.json",
         :path_links => "../data/Links.json",
