@@ -7,6 +7,6 @@ This project is **NOT** designed for hydraulic simulations, however, if someone 
 
 This project is still mainly an experiment. The main experiment is - can we build it faster? If that proves fruitful, then I will continue creating the project.
 
-The project was initially started in [Go](https://golang.org/), however it was later changed for [Crystal](https://crystal-lang.org/). Crystal should give users familiar with the InfoWorks ICM Ruby API the ability to quickly build algorithms in Crystal, as syntactically Ruby and Crystal are very alike.
+The project was [initially started](https://github.com/sancarn/OpenWorks-Network-Go) in [Go](https://golang.org/), however this was later changed for [Crystal](https://crystal-lang.org/). Crystal should give users familiar with the InfoWorks ICM Ruby API a familiar enviornment which allows them to quickly build algorithms in Crystal, as syntactically Ruby and Crystal are very alike.
 
 Finally, I will be making Ruby scripts to easily bridge between InfoWorks and OpenWorks networks, hopefully allowing for easy and fast migration.
