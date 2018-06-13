@@ -1,9 +1,12 @@
+require 'json'
 module OW
     class Node
       property id : String
       property type : String
       property us_links : Array(Link)
       property ds_links : Array(Link)
+      getter category = "_nodes"
+      property data : JSON::Any
       def initialize(id : String,sType : String)
         @id = id
         @type = sType
