@@ -26,18 +26,18 @@ class Variant(T)
   macro method_missing(call)
     puts {{call.name.stringify}}
     puts {{call.args[0]}}
-    if {{call.name.stringify}}=="+"
+    {%if call.name.stringify=="+"%}
       if @@auto_cast
-        if typeof(@var)!=typeof({{call.args[0]}})
+        {%if typeof(@var)!=typeof(call.args[0])%}
           casted_arg = typeof(@var).new({{call.args[0]}})
           return @var.{{call.name}}(casted_arg)
-        else
+        {%else%}
           return @var.{{call.name}}({{*call.args}})
-        end
+        {%end%}
       end
-    else
+    {%else%}
       return @var.{{call.name}}({{*call.args}})
-  	end
+  	{%end%}
   end
 end
 
