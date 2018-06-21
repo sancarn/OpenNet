@@ -3,20 +3,22 @@ require "./libs/Link"
 require "./libs/Subcatchment"
 require "json"
 
-module OW
-    OW::use_strict = false
+module ON
+    ON::use_strict = false
     DEFAULT_OPTIONS = {
         :path_nodes => "../data/Nodes.json",
         :path_links => "../data/Links.json",
         :path_subcs => "../data/Subcs.json", #not yet implemented
-        :geospatial_connectivity => "false"  #not yet implemented
+        :geospatial_connectivity => false,   #not yet implemented
+        :load_data => false                  #not yet implemented
+
     }
     class Network
         property nodes         = {} of String => Node
         property links         = {} of String => Link
         property subcatchments = {} of String => Subcatchment
 
-        def initialize(options = {} of Symbol => String)
+        def initialize(options = {} of Symbol => String|Boolean)
             options = DEFAULT_OPTIONS.merge(options)
 
             #Grap nodes data

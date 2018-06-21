@@ -1,5 +1,5 @@
 require 'json'
-module OW
+module ON
     class Node
       property id : String
       property type : String

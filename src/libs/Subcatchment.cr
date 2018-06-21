@@ -1,5 +1,5 @@
 require 'json'
-module OW
+module ON
     class Subcatchment
       getter category = "_subcatchments"
       property data : JSON::Any

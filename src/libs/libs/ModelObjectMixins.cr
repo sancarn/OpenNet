@@ -1,16 +1,16 @@
-module OW
+module ON
     def strictMode(mode : Boolean, &block)
-        userUseStrict = OW::use_strict
-        OW::use_strict = mode
+        userUseStrict = ON::use_strict
+        ON::use_strict = mode
         block.yield
-        OW::use_strict = userUseStrict
+        ON::use_strict = userUseStrict
     end
     module ModelObjectMixins
         def navigate(query : String) : Object
             sClass = self.class.to_s
             case query
                 when "us_node"
-                    if OW::use_strict
+                    if ON::use_strict
                         if sClass == "Link"
                             return self.us_node
                         end
@@ -29,7 +29,7 @@ module OW
                         end
                     end
                 when "ds_node"
-                    if OW::use_strict
+                    if ON::use_strict
                         if sClass == "Link"
                             return self.ds_node
                         end
@@ -48,7 +48,7 @@ module OW
                         end
                     end
                 when "ds_links"
-                    if OW::use_strict
+                    if ON::use_strict
                         if sClass == "Node"
                             return self.ds_links
                         else
@@ -74,7 +74,7 @@ module OW
                         end
                     end
                 when "us_links"
-                    if OW::use_strict
+                    if ON::use_strict
                         if sClass == "Node"
                             return self.us_links
                         else

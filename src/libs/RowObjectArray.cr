@@ -1,4 +1,4 @@
-module OW
+module ON
   alias OBJECT = Node|Link|Subcatchment
 
   class RowObjectArray
@@ -7,7 +7,7 @@ module OW
     end
 
     def row_objects(query | String)
-      if OW::use_strict
+      if ON::use_strict
         raise "No method 'row_objects' of Array"
       end
       ret = [] of OBJECT
@@ -23,7 +23,7 @@ module OW
     #   #...
     # end
     def row_objects_thread(query | String)
-      if OW::use_strict
+      if ON::use_strict
         raise "No method 'row_objects' of Array"
       end
       this = self
@@ -86,4 +86,3 @@ end
 
   p json
 =end
-  
