@@ -1,4 +1,4 @@
-# OpenWorks-Network
+# OpenNet
 An Open Source implementation of Infoworks Model Network
 
 The aim of this project is to create a fast equivelent of the InfoWorks ICM model network, for use in model data analysis and bulk model updates. The project will be optimised mainly for tracing speed, as connectivity is the most important part of hydraulic models. Other model data will also be accessible from the main geographical object, however the access of this data is likely to be slower, though this may change as this project evolves.
@@ -9,4 +9,4 @@ This project is still mainly an experiment. The main experiment is - can we buil
 
 The project was [initially started](https://github.com/sancarn/OpenWorks-Network-Go) in [Go](https://golang.org/), however this was later changed for [Crystal](https://crystal-lang.org/). Crystal should give users familiar with the InfoWorks ICM Ruby API a familiar enviornment which allows them to quickly build algorithms in Crystal, as syntactically Ruby and Crystal are very alike.
 
-Finally, I will be making Ruby scripts to easily bridge between InfoWorks and OpenWorks networks, hopefully allowing for easy and fast migration.
+Finally, I will be making Ruby scripts to easily bridge between InfoWorks and OpenNet networks, hopefully allowing for easy and fast migration.
